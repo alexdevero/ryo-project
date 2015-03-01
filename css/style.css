@@ -35,12 +35,11 @@ footer {
   header {height: 60px;}
 }
 aside {
-  position: fixed;
+  position: absolute;
   left: -100px;
   z-index: 99;
   max-width: 100px;
   width: 100%;
-  height: 100%;
 }
 .hidden {
   display: none;
