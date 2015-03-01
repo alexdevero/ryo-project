@@ -23,6 +23,9 @@ body {
 }
 header,
 aside {background: #191a20;}
+aside,
+main,
+footer {float: left;}
 header,
 footer {
   width: 100%;
@@ -46,8 +49,10 @@ aside {
   visibility: hidden;
 }
 main {
+  /*position: relative;*/
   max-width: 100%;
   background: #fff;
+  overflow: hidden;
 }
 section {width: 100%;}
 a {transition: all .25s;}
