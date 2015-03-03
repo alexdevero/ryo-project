@@ -1,25 +1,23 @@
 $(function() {
+  var socialMediaNav = $(".js-aside");
+  socialMediaNav.css({"height": "" + $(window).height() + "px"});
+  $(".js-main").css({"width": "" + $(window).width() - socialMediaNav.width() + "px"});
   $(".js-aside-toggle").click(function(e) {
-    var socialMediaNav = $(".js-aside");
     if (socialMediaNav.hasClass("hidden")) {
-      socialMediaNav.removeClass("hidden");
+      $(".js-main").css({
+        "width": $(".js-main").width() - socialMediaNav.width()
+      });
       socialMediaNav.animate({
         "left": 0
       });
-      $("main").animate({
-        "margin-left": "100px",
-        "width": $("main").width() - 100
-      });
+      socialMediaNav.removeClass("hidden");
     } else {
       socialMediaNav.animate({
         "left": "-100px"
-      }).delay(200).queue(function() {
+      }).queue(function() {
         $(this).addClass("hidden");
         $(this).dequeue();
-      });
-      $("main").animate({
-        "margin-left": 0,
-        "width": "100%"
+        $(".js-main").css({"width": "100%"});
       });
     }
   });
