@@ -38,8 +38,7 @@ footer {
   header {height: 60px;}
 }
 aside {
-  position: absolute;
-  left: -100px;
+  position: relative;
   z-index: 99;
   max-width: 100px;
   width: 100%;
@@ -48,8 +47,9 @@ aside {
   display: none;
   visibility: hidden;
 }
+.soc-media ul {position: fixed;}
 main {
-  max-width: 100%;
+  width: 100%;
   background: url(../img/geometry_@2X.png) repeat;
   overflow: hidden;
 }
@@ -233,10 +233,20 @@ aside a:hover {background: #212228;}
 .intro {
   position: relative;
   padding: 27% 0;
+  margin: 0;
+  width: 100%;
   min-height: 706px;
   background: url(../img/Video-Player.jpg) no-repeat;
   background-position: center 40px;
   background-size: 83%;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
+  background: url(../img/Video-Player@2x.jpg) no-repeat;
 }
 @media screen and (max-width: 1280px) {
   .intro {
